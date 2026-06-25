@@ -1,0 +1,15 @@
+# Allowlist public mirror contents. Ignore everything by default.
+*
+
+# Keep repository metadata and public documentation.
+!.gitignore
+!README.md
+!NOTICE.md
+!SECURITY.md
+!ROADMAP.md
+!ARCHITECTURE.md
+!FAQ.md
+!CONTRIBUTING.md
+!CHANGELOG.md
+!assets/
+!assets/README.md
