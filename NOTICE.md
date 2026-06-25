@@ -1,6 +1,6 @@
 # Notice
 
-Copyright (c) 2026 William
+Copyright (c) 2026 Bruket - William Wigertz Wåhlström
 
 All rights reserved.
 
