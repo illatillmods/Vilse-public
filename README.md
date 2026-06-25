@@ -1,78 +1,86 @@
 # Vilse
 
-Vilse is a long-term civilization MMO project about entering an industrial world
-that is already running: cities, depots, markets, permits, archives,
-infrastructure, logistics, labor pressure, and institutions before the player
-arrives.
+Vilse is an MMO project about arriving late.
 
-This repository is a public mirror for product transparency and project updates.
-It intentionally does **not** contain source code, backend logic, prompts,
-datasets, deployment configuration, or implementation details that would make
-the private prototype cloneable.
+The world is already running when the player enters it: depots have schedules,
+markets have memory, public offices have records, infrastructure has owners,
+permits have consequences, and the useful truth is rarely sitting in one
+omniscient UI.
 
-## Current Status
+This repository is a public mirror for product transparency. It does not contain
+the private source code, game client, server, maps, prompts, datasets, deployment
+configuration, or implementation detail needed to reproduce the prototype.
 
-As of June 25, 2026, Vilse is a private prototype, not a released game and not a
-public test build.
+## Snapshot
 
-The private implementation currently demonstrates a dense Confluence Basin demo
-slice with:
+As of June 25, 2026, Vilse is a private prototype, not a released game, public
+test build, open-source project, or playable public demo.
 
-- a server-authoritative hauling loop from public work board to pickup,
-  delivery, and payout
+The private implementation currently proves a dense Confluence Basin slice:
+
+- server-authoritative hauling from public work board to pickup, delivery, and
+  payout
 - actor-visible records for markets, notices, permissions, compliance,
   construction, labor, research, production, vehicle service, archives, and
   infrastructure
-- a legacy 3D prototype used as reference material for field interaction and
-  institutional UI
-- an active 2D/2.5D MVP client direction intended to prove the same world
-  through map movement and dense data panels
-- a protocol direction that treats clients as projections over server-owned
-  world state
+- a legacy Godot 4 prototype that remains reference material for the 3D field
+  slice, HUD, vehicle pass, and world-surface interaction
+- an active 2D/2.5D MVP direction using a Bevy + egui client scaffold against
+  the current backend
+- Rust protocol, persistence, and bot scaffolds that are not yet the primary
+  simulation runtime
+- a protocol direction where clients are projections over server-owned world
+  state, not holders of gameplay authority
 
-What is **not** implemented yet: a public build, production persistence, real
-MMO concurrency, broad multi-region geography, player-run institutions at scale,
-or a shipped game economy.
+Not implemented yet: a public build, production persistence, real MMO
+concurrency, broad multi-region geography, player-run institutions at scale, or
+a shipped economy.
 
-## Product Direction
+## What Makes Vilse Different
 
-Vilse is built around a different MMO premise:
+Vilse is not a blank survival reset with a market board attached. The design bet
+is a civilization simulation where paperwork, transport, finance, institutional
+trust, and infrastructure are gameplay.
 
-- the world is not a blank survival reset
-- information is not omniscient; it comes from records, publications, registries,
-  offices, and trust relationships
-- infrastructure and logistics are gameplay, not background scenery
-- institutions, permits, finance, labor, and maintenance create leverage
-- moment-to-moment play should stay readable while the systems underneath remain
-  deep
+Core principles:
 
-The first goal is not geographic size. The first goal is one dense region where
-the systems prove they can interact honestly.
+- The world has history before the player arrives.
+- Information comes from records, notices, publications, registries, offices,
+  audits, and relationships.
+- Logistics and maintenance are first-class systems, not background scenery.
+- Institutions create leverage, friction, corruption, safety, and opportunity.
+- The field experience must stay readable even when the underlying simulation is
+  deep.
 
-## Why This Mirror Exists
+The first public-safe goal is not a huge map. It is one dense region where these
+systems interact honestly.
 
-This public mirror gives a controlled view of the project without exposing the
-private repository. It is meant for:
+## The Current Slice
 
-- public positioning
-- project status
-- high-level architecture
-- roadmap transparency
-- licensing and reuse boundaries
+The private demo is centered on useful work instead of spectacle:
 
-It is not an open-source release and not a source-available build.
+1. Read a public freight posting.
+2. Accept a contract under server-owned rules.
+3. Move goods through a transport graph.
+4. Deliver, get paid, and see the payout become a record.
+5. Read the institutions around the route: permits, markets, public notices,
+   compliance pressure, infrastructure state, and local history.
 
-## Documents
+The important part is not the hauling itself. It is that hauling touches records,
+authority, money, access, and place.
 
-- [ARCHITECTURE.md](ARCHITECTURE.md) — high-level architecture without private implementation details
-- [ROADMAP.md](ROADMAP.md) — truthful public roadmap and current limitations
-- [SECURITY.md](SECURITY.md) — reporting and disclosure expectations
-- [FAQ.md](FAQ.md) — public-surface questions
-- [CONTRIBUTING.md](CONTRIBUTING.md) — contribution posture
-- [NOTICE.md](NOTICE.md) — all-rights-reserved notice
+## Mirror Contents
 
-## Reuse
+- [ARCHITECTURE.md](ARCHITECTURE.md) - high-level architecture without private implementation details.
+- [ROADMAP.md](ROADMAP.md) - public roadmap, current limits, and staged ambition.
+- [SECURITY.md](SECURITY.md) - reporting and disclosure expectations.
+- [FAQ.md](FAQ.md) - public-surface questions.
+- [CONTRIBUTING.md](CONTRIBUTING.md) - contribution posture.
+- [NOTICE.md](NOTICE.md) - all-rights-reserved notice.
+- [assets/](assets/) - reserved for reviewed public media only.
 
-No permission is granted to copy, modify, redistribute, host, resell, or use this
-work or any substantial part of it in a competing product or service without
-explicit written permission.
+## Reuse Boundary
+
+This mirror is not a source-available release. No permission is granted to copy,
+modify, redistribute, host, resell, or use Vilse or any substantial part of it in
+a competing product or service without explicit written permission.
